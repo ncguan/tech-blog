@@ -1,0 +1,32 @@
+[
+    {
+        "title": "blog title1",
+        "content": "contentcontent",
+        "user_id": 1
+    },
+    {
+        "title": "title2",
+        "content": "content22",
+        "user_id": 2
+    },
+    {
+        "title": "blog3",
+        "content": "blog content",
+        "user_id": 3
+    },
+    {
+        "title": "blloogg",
+        "content": "contentcontent",
+        "user_id": 4
+    },
+    {
+        "title": "blog title2",
+        "content": "contentcontent2",
+        "user_id": 1
+    },
+    {
+        "title": "title4",
+        "content": "content44",
+        "user_id": 2
+    }
+]
