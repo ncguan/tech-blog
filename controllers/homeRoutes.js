@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Blog } = require('../models');
+const { User, Blog, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,14 +27,27 @@ router.get('/blog/:id', async (req, res) => {
                 {
                     model: User,
                     attributes: ['username'],
-                },
+                }
             ],
         });
 
         const blog = blogData.get({ plain: true });
 
+        const commentData = await Comment.findAll({
+            where: {blog_id: req.params.id},
+            include: [
+                {
+                    model: User,
+                    attributes: ['username'],
+                }
+            ],
+        });
+
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
+
         res.render('blog', {
             ...blog,
+            comments,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -65,7 +78,7 @@ router.get('/signup', (req, res) => {
         return;
     }
 
-    res.render('signup', {logged_in: req.session.logged_in });
+    res.render('signup', { logged_in: req.session.logged_in });
 });
 
 module.exports = router;

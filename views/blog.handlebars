@@ -1,3 +1,12 @@
 <h2>{{title}}</h2>
 <p>Created by {{user.username}} on {{format_date date_created}}</p>
 <p>{{content}}</p>
+<p>Comments</p>
+{{#each comments as |comment|}}
+<div>
+    <div>
+        <p>{{comment.content}}</p>
+        <p>Commented by: {{comment.user.username}}</p>
+    </div>
+</div>
+{{/each}}
