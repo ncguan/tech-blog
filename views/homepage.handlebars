@@ -2,7 +2,7 @@
 <div>
     <div>
         <h2>
-            {{blog.title}}
+            <a href="/blog/{{blog.id}}">{{blog.title}}</a>
         </h2>
         <p>
             Posted by {{blog.user.username}} on {{format_date blog.date_created}}
