@@ -77,6 +77,15 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
+router.get('/newpost', (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+    }
+
+    res.render('newpost');
+});
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
