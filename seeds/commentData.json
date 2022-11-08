@@ -1,0 +1,12 @@
+[
+    {
+        "content": "commenting",
+        "user_id": 1,
+        "blog_id": 2
+    },
+    {
+        "content": "commenting commenting",
+        "user_id": 3,
+        "blog_id": 5
+    }
+]
