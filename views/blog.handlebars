@@ -10,3 +10,16 @@
     </div>
 </div>
 {{/each}}
+<form class = "comment-form">
+    <div>
+        <label>Comment:</label>
+        <input type="text" id="comment-content" />
+    </div>
+    <div>
+        <button type="submit">submit</button>
+    </div>
+</form>
+
+{{#if logged_in}}
+  <script src="/js/comment.js"></script>
+  {{/if}}
