@@ -57,7 +57,21 @@ router.get('/blog/:id', async (req, res) => {
 
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
-        //render blogs from logged in user
+        try {
+            const userData = await User.findByPk(req.session.user_id, {
+              attributes: { exclude: ['password'] },
+              include: [{ model: Blog }],
+            });
+        
+            const user = userData.get({ plain: true });
+        
+            res.render('dashboard', {
+              ...user,
+              logged_in: true
+            });
+          } catch (err) {
+            res.status(500).json(err);
+          }
     } catch (err) {
         res.status(500).json(err);
     }
