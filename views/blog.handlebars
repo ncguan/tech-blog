@@ -1,6 +1,16 @@
 <h2>{{title}}</h2>
 <p>Created by {{user.username}} on {{format_date date_created}}</p>
 <p>{{content}}</p>
+
+{{#if isUser}}
+<div>
+    <button type="submit" id="update-btn">update post</button>
+</div>
+<div>
+    <button type="submit" id="delete-btn">delete post</button>
+</div>
+{{/if}}
+
 <p>Comments</p>
 {{#each comments as |comment|}}
 <div>
@@ -10,7 +20,7 @@
     </div>
 </div>
 {{/each}}
-<form class = "comment-form">
+<form class="comment-form">
     <div>
         <label>Comment:</label>
         <input type="text" id="comment-content" />
@@ -21,5 +31,5 @@
 </form>
 
 {{#if logged_in}}
-  <script src="/js/comment.js"></script>
-  {{/if}}
+<script src="/js/comment.js"></script>
+{{/if}}
