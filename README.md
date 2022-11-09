@@ -1,6 +1,6 @@
 # Tech Blog
 
-![E-Commerce Back End Video](./assets/images/ecommerce-back-end-image.png)
+![Image of Tech Blog Site](./assets/images/.png)
 [Link to Deployed Site](https://ng-tech-blog.herokuapp.com/)
 
 ## Description

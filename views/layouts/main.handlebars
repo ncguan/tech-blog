@@ -11,14 +11,14 @@
 <body>
   <div>
     <header>
-      <h1 class="d-flex justify-content-center">The Tech Blog</h1>
-      <nav class="navbar">
-        <a class="navbar" href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
+      <h1 class="d-flex justify-content-center bg-primary text-white p-5">The Tech Blog</h1>
+      <nav class="d-flex justify-content-center">
+        <a class ="m-2" href="/">Home</a>
+        <a class ="m-2" href="/dashboard">Dashboard</a>
         {{#if logged_in}}
-        <a href="/" id="logout">Logout</a>
+        <a class ="m-2" href="/" id="logout">Logout</a>
         {{else}}
-        <a href="/login">Login</a>
+        <a class ="m-2" href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
