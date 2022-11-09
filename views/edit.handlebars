@@ -1,19 +1,20 @@
-<h2>Edit Post</h2>
-<form class="edit-form">
-    <div>
+<h2 class="d-flex justify-content-center">Edit Post</h2>
+
+<form class="edit-form m-5">
+    <div class="form-group">
         <label>Title:</label>
-        <input type="text" id="blog-title" value="{{title}}"/>
+        <input type="text" class="form-control" id="blog-title" value="{{title}}"/>
     </div>
-    <div>
+    <div class="form-group">
         <label>Content:</label>
-        <input type="text" id="blog-content" value="{{content}}"/>
+        <input type="text" class="form-control" id="blog-content" value="{{content}}"/>
     </div>
-    <div>
-        <button type="submit" id="update-btn" blog-id={{id}}>Update</button>
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-primary" id="update-btn" blog-id={{id}}>Update</button>
     </div>
 </form>
-<div>
-    <button id="delete-btn" blog-id={{id}}>Delete</button>
+<div class="text-center">
+    <button class="btn btn-outline-primary" id="delete-btn" blog-id={{id}}>Delete</button>
 </div>
 
 <script src="/js/edit.js"></script>

@@ -4,15 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <title>Tech Blog</title>
 </head>
 
 <body>
   <div>
     <header>
-      <h1>The Tech Blog</h1>
-      <nav>
-        <a href="/">Home</a>
+      <h1 class="d-flex justify-content-center">The Tech Blog</h1>
+      <nav class="navbar">
+        <a class="navbar" href="/">Home</a>
         <a href="/dashboard">Dashboard</a>
         {{#if logged_in}}
         <a href="/" id="logout">Logout</a>

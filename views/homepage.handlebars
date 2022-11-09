@@ -1,12 +1,10 @@
 {{#each blogs as |blog|}}
-<div>
-    <div>
-        <h2>
-            <a href="/blog/{{blog.id}}">{{blog.title}}</a>
-        </h2>
-        <p>
-            Posted by {{blog.user.username}} on {{format_date blog.date_created}}
-        </p>
-    </div>
+<div class="card m-5 pl-3 pt-3">
+    <h2>
+        <a href="/blog/{{blog.id}}">{{blog.title}}</a>
+    </h2>
+    <p>
+        Posted by {{blog.user.username}} on {{format_date blog.date_created}}
+    </p>
 </div>
 {{/each}}

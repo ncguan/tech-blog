@@ -1,23 +1,25 @@
-<h2>{{title}}</h2>
-<p>Created by {{user.username}} on {{format_date date_created}}</p>
-<p>{{content}}</p>
-
-<p>Comments</p>
-{{#each comments as |comment|}}
-<div>
-    <div>
-        <p>{{comment.content}}</p>
-        <p>Commented by {{comment.user.username}} on {{format_date comment.date_created}}</p>
-    </div>
+<div class="card m-5 pl-3 pt-3">
+    <h2>{{title}}</h2>
+    <p>Created by {{user.username}} on {{format_date date_created}}</p>
+    <p>{{content}}</p>
 </div>
+
+<p class="d-flex justify-content-center">Comments</p>
+{{#each comments as |comment|}}
+
+<div class="card m-5 pl-3 pt-3">
+    <p>{{comment.content}}</p>
+    <p>Commented by {{comment.user.username}} on {{format_date comment.date_created}}</p>
+</div>
+
 {{/each}}
-<form class="comment-form">
-    <div>
+<form class="comment-form m-5">
+    <div class="form-group">
         <label>Comment:</label>
-        <input type="text" id="comment-content" />
+        <input type="text" class="form-control" id="comment-content" />
     </div>
-    <div>
-        <button type="submit">submit</button>
+    <div class="text-center">
+        <button class="btn btn-outline-primary" type="submit">submit</button>
     </div>
 </form>
 
