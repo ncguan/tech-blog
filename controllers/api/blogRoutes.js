@@ -42,11 +42,31 @@ router.delete('/:id', withAuth, async (req, res) => {
         });
 
         if (!blogData) {
-            res.json({ message: 'No project found with this id' });
+            res.json({ message: 'No blog found with this id' });
             return;
         }
 
         res.json(projectData);
+    } catch (err) {
+        res.json(err);
+    }
+});
+
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+        const blogData = await Blog.update(req.body, {
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id
+            },
+        });
+
+        if (!blogData) {
+            res.status(404).json({ message: 'No blog found with that id' });
+            return;
+        }
+
+        res.json(blogData);
     } catch (err) {
         res.json(err);
     }
