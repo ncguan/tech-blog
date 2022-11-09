@@ -1,6 +1,6 @@
 # Tech Blog
 
-![Image of Tech Blog Site](./assets/images/.png)
+![Image of Tech Blog Site](./assets/images/tech-blog-image.png)
 [Link to Deployed Site](https://ng-tech-blog.herokuapp.com/)
 
 ## Description
